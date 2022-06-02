@@ -1,0 +1,97 @@
+{
+  "name": "John Doe",
+  "aboutMe": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+  "contact": {
+    "title": "Sr. Software Developer",
+    "city": "Tandil, Argentina",
+    "email": "test@mail.com",
+    "phone": "+54 9 123",
+    "github": "github",
+    "linkedin": "linkedin",
+    "website": "website",
+    "twitter": "twitter"
+  },
+  "languages": [
+    "🇪🇸🇦🇷 Spanish: Native",
+    "🇺🇸 English: Conversational",
+    "🇮🇹 Italian: Basic"
+  ],
+  "experience": [
+    {
+      "title": "Sr Developer / Conosoft.com.ar",
+      "startDate": "Jan 2015",
+      "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+    },
+    {
+      "title": "Web Developer / something.com",
+      "startDate": "Mar 2012",
+      "endDate": "Dec 2014",
+      "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+    },
+    {
+      "title": "Graphic Designer / somewhere.com",
+      "startDate": "Jun 2010",
+      "endDate": "Mar 2012",
+      "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+    }
+  ],
+  "education": [
+    {
+      "title": "Street University",
+      "startDate": "2022",
+      "description": "All I need to know in one place"
+    },
+    {
+      "title": "Sri Lanka Business School",
+      "startDate": "2013",
+      "endDate": "2015",
+      "description": "Master Degree"
+    },
+    {
+      "title": "School of Sarasa",
+      "startDate": "2010",
+      "endDate": "2013",
+      "description": "Bachelor Degree"
+    }
+  ],
+  "skills": [
+    "Spring Framework",
+    "nodejs",
+    "Flutter",
+    "Java 8+",
+    "Javascript",
+    "Node.js",
+    "Typescript",
+    "React.js",
+    "Angular/js",
+    "Spring",
+    "SQL",
+    "Git",
+    "Object oriented design",
+    "Docker",
+    "K8s",
+    "Jenkins",
+    "Gradle",
+    "Configuration Management",
+    "agile practices",
+    "Testing",
+    "TDD",
+    "AWS",
+    "Jira",
+    "Functional programming",
+    "BDD",
+    "Pair programming",
+    "shell scripting",
+    "Kotlin",
+    "Go",
+    "Groovy",
+    "Python",
+    "Electron.js",
+    "Inversify.js",
+    "nest.js",
+    "Cucumber",
+    "Geb",
+    "Cassandra",
+    "Maven"
+  ]
+}

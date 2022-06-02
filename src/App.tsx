@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid, ThemeProvider } from '@mui/material';
 
-function App() {
+import { theme } from './theme';
+import { Footer } from './components/Footer';
+import { SideBar } from './components/SideBar';
+import { Content } from './components/Content';
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme} >
+      <Container sx={{bgcolor: '#f1f1f1'}} >
+        <Container sx={{padding: '8px!important'}}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={4} >
+              <SideBar />
+            </Grid>
+            <Grid item xs={12} sm={8}>
+              <Content/>
+            </Grid>
+          </Grid>
+        </Container>
+        <Footer />
+      </Container>
+    </ThemeProvider>
   );
 }
-
-export default App;
