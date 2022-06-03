@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "fmillone.github.io/react-web-resume/static/css/main.958ee204.css",
-    "main.js": "fmillone.github.io/react-web-resume/static/js/main.7d83be0b.js",
-    "static/js/787.579b3fbe.chunk.js": "fmillone.github.io/react-web-resume/static/js/787.579b3fbe.chunk.js",
-    "static/media/pexels-photo-1261820.webp": "fmillone.github.io/react-web-resume/static/media/pexels-photo-1261820.9d2a36cf8a61ac56e18c.webp",
-    "index.html": "fmillone.github.io/react-web-resume/index.html",
-    "main.958ee204.css.map": "fmillone.github.io/react-web-resume/static/css/main.958ee204.css.map",
-    "main.7d83be0b.js.map": "fmillone.github.io/react-web-resume/static/js/main.7d83be0b.js.map",
-    "787.579b3fbe.chunk.js.map": "fmillone.github.io/react-web-resume/static/js/787.579b3fbe.chunk.js.map"
+    "main.css": "/react-web-resume/static/css/main.958ee204.css",
+    "main.js": "/react-web-resume/static/js/main.31f92013.js",
+    "static/js/787.579b3fbe.chunk.js": "/react-web-resume/static/js/787.579b3fbe.chunk.js",
+    "static/media/pexels-photo-1261820.webp": "/react-web-resume/static/media/pexels-photo-1261820.9d2a36cf8a61ac56e18c.webp",
+    "index.html": "/react-web-resume/index.html",
+    "main.958ee204.css.map": "/react-web-resume/static/css/main.958ee204.css.map",
+    "main.31f92013.js.map": "/react-web-resume/static/js/main.31f92013.js.map",
+    "787.579b3fbe.chunk.js.map": "/react-web-resume/static/js/787.579b3fbe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.958ee204.css",
-    "static/js/main.7d83be0b.js"
+    "static/js/main.31f92013.js"
   ]
 }
