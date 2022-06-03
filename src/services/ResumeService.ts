@@ -1,5 +1,5 @@
 
-import data from '../sample-data.json'
+import data from '../data/resume-data.json';
 
 interface Resume {
   skills: string[];
