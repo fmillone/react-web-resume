@@ -1,9 +1,10 @@
 import { faSuitcase, faUser, faUserGraduate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
 import { Chip, Divider, Paper, Stack, styled, Typography } from "@mui/material";
-import { Container } from "@mui/system";
+import { Container, SxProps } from "@mui/system";
 import { contentSx, ResumeIcon } from "./common";
 import { resumeService } from "../services/ResumeService";
+import React from "react";
 
 const ContentText = styled(Typography)({
   marginTop: 5,
@@ -38,20 +39,24 @@ export function Content() {
 
 interface ContentDescriptionProps {
   title: string;
-  children: JSX.Element,
+  children?: JSX.Element | JSX.Element[],
   startDate: string;
   endDate?: string;
+  company?: string;
+  place?: string;
 }
 const currentJobLabel = (<Chip label="Current" size="small" color="primary" />);
-function ContentDescription({ title, children, startDate, endDate }: ContentDescriptionProps) {
+const iconSx: SxProps = { fontSize: '0.8rem', marginRight: 0.2, marginBottom: 0.1 };
+function ContentDescription({ title, children, startDate, endDate, company, place }: ContentDescriptionProps) {
   const end = endDate || currentJobLabel;
   return (
     <Container sx={contentSx}>
-      <Typography variant="h5" >{title}</Typography>
-      <Typography variant="h6" sx={{ color: 'primary.main' }} >
-        <ResumeIcon icon={faCalendarDays} />
+      <Typography variant="subtitle2" sx={{ color: 'primary.main', float: 'right' }} >
+        <ResumeIcon icon={faCalendarDays} sx={iconSx} />
         {startDate} - {end}
       </Typography>
+      <Typography variant="h5" >{title}</Typography>
+      <Typography variant="h6" >{company}, {place}</Typography>
       {children}
     </Container>
   );
@@ -85,11 +90,22 @@ function CardHeading({ icon, children }: CardHeadingProps) {
   );
 }
 
-function toContentDescription({ title, startDate, endDate, description }: any, index: number, list: any[]) {
+
+function joinDescriptions(description?:string| string[]) {
+  if(description) {
+    if(Array.isArray(description)) {
+      return  description.map((it, i) => <ContentText key={i}>{it}</ContentText>);
+    } else {
+      return <ContentText>{description}</ContentText>;
+    }
+  }
+}
+
+function toContentDescription({ description, ...rest }: any, index: number, list: any[]) {
   return (
     <div key={index}>
-      <ContentDescription title={title} startDate={startDate} endDate={endDate}>
-        <ContentText>{description}</ContentText>
+      <ContentDescription {...rest} >
+        {joinDescriptions(description)}
       </ContentDescription>
       {list.length - 1 === index ? '' : <ContentDivider />}
     </div>

@@ -15,7 +15,9 @@ interface Experience {
   title: string;
   startDate: string;
   endDate?: string;
-  description: string;
+  description?: string | string[];
+  company?: string;
+  place?: string;
 }
 
 interface Contact {

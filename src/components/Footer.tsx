@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <Box sx={boxSx} component="footer">
       <Typography variant="subtitle1" align="center">
-        <Link color="inherit" href="https://github.com/fmillone/web-cv">
+        <Link color="inherit" href="https://github.com/fmillone/react-web-resume">
           Source Code
           <ResumeIcon sx={{ marginLeft: 1, color: 'primary.contrastText' }} icon={faGithub} />
         </Link>
