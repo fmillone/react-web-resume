@@ -1,6 +1,5 @@
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { faAngleDown, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
-import { Collapse, IconButton, Paper, Typography } from "@mui/material";
+import { Collapse, FormControlLabel, Paper, Switch, Typography } from "@mui/material";
 import { useMemo, useState } from "react";
 import { TransitionGroup } from "react-transition-group";
 import { Experience } from "../../services/ResumeService";
@@ -17,9 +16,13 @@ export function ExpandableCard({ experience, icon, title }: ExpandableCardProps)
 
   const expandable = useMemo(() => !experience.every(e => e.showCompressed), [experience]);
   const expandIcon = useMemo(() => expandable && (
-    <IconButton sx={{ marginTop: '1rem', float: 'right' }} onClick={() => setExpanded(e => !e)}>
-      <ResumeIcon sx={{ marginRight: 0 }} icon={expanded ? faAngleLeft : faAngleDown} />
-    </IconButton>
+    <FormControlLabel
+      label={<Typography sx={{ fontSize: '0.3em' }}>{expanded ? 'show less' : 'show all'}</Typography>}
+      labelPlacement='end'
+      control={
+        <Switch sx={{ marginLeft: '10px' }} color="primary" onChange={() => setExpanded(e => !e)} />
+      }
+    />
   ), [expanded, expandable]);
 
   const data = useMemo(
@@ -29,8 +32,7 @@ export function ExpandableCard({ experience, icon, title }: ExpandableCardProps)
 
   return (
     <Paper sx={contentSx} elevation={8}>
-      {expandIcon}
-      <CardHeading icon={icon}>{title}</CardHeading>
+      <CardHeading icon={icon}>{title} {expandIcon}</CardHeading>
       <TransitionGroup>
         {data.map(collapsed(toContentDescription))}
       </TransitionGroup>
@@ -64,11 +66,11 @@ export function ContentCard(props: ContentCardProps) {
 
 interface CardHeadingProps {
   icon: IconDefinition;
-  children: JSX.Element | string,
+  children: JSX.Element | string | (JSX.Element | string | false)[];
 }
 function CardHeading({ icon, children }: CardHeadingProps) {
   return (
-    <Typography variant='h3' color='text.secondary' sx={{ margin: '10px 8px', padding: '16px 0' }}>
+    <Typography variant='h4' color='text.secondary' sx={{ margin: '10px 8px', padding: '16px 0' }}>
       <ResumeIcon sx={{ fontSize: '2.4rem' }} icon={icon} />
       {children}
     </Typography>

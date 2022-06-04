@@ -1,5 +1,5 @@
 import { faScrewdriverWrench, faToolbox } from "@fortawesome/free-solid-svg-icons";
-import { Chip, Container, Stack, SxProps, Typography } from "@mui/material";
+import { Chip, Container, Stack, SxProps, Theme, Typography, useMediaQuery } from "@mui/material";
 import React from "react";
 import { resumeService } from "../../services/ResumeService";
 import { contentSx, ResumeIcon } from "../common";
@@ -20,6 +20,8 @@ function toChip(e: string, index: number): JSX.Element {
 }
 
 export function Skills() {
+  const isLessOf320 = useMediaQuery((theme: Theme) => theme.breakpoints.down(320));
+
   return (
     <Stack sx={{ margin: '0.5rem 0' }}>
       <Typography sx={sx} >
@@ -28,7 +30,7 @@ export function Skills() {
         <ResumeIcon sx={{ marginLeft: '0.5rem' }} icon={faScrewdriverWrench} />
       </Typography>
 
-      <Container sx={{ marginTop: 1 }}>
+      <Container sx={{ marginTop: 1, maxHeight: isLessOf320 ?  220 : undefined , overflow: 'auto' }}>
         {skills}
       </Container>
     </Stack>

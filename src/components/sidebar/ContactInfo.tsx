@@ -26,7 +26,7 @@ export function ContactInfo() {
         <Link href={`https://www.linkedin.com/in/${contact.linkedin}`}>{contact.linkedin}</Link>
       </ContactItem>
       <ContactItem icon={faGlobeAmericas}>
-        <Link href={contact.website}>{contact.websiteName || contact.website}</Link>
+        Web: <Link href={contact.website}>{contact.websiteName || contact.website}</Link>
       </ContactItem>
       <ContactItem icon={faTwitter}>
         <Link href={`https://twitter.com/${contact.twitter}`}>{contact.twitter}</Link>
@@ -37,7 +37,7 @@ export function ContactInfo() {
 
 interface ContactItemProps {
   icon: IconDefinition;
-  children: JSX.Element | string;
+  children: JSX.Element | string | (JSX.Element | string)[];
 }
 function ContactItem({ icon, children }: ContactItemProps) {
   return (
