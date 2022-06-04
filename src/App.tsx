@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Grid, ThemeProvider } from '@mui/material';
 
 import { theme } from './theme';
 import { Footer } from './components/Footer';
 import { SideBar } from './components/SideBar';
 import { Content } from './components/Content';
+import { resumeService } from './services/ResumeService';
 
-
+const name = resumeService.getData().name;
 export default function App() {
+  useEffect(()=> {
+    document.title = `${name}'s Resume`;
+  }, []);
   return (
     <ThemeProvider theme={theme} >
       <Container sx={{bgcolor: '#f1f1f1'}} >
