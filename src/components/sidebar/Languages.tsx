@@ -1,7 +1,7 @@
 import { faComment, faCommentAlt, faCommentDots, faLanguage } from '@fortawesome/free-solid-svg-icons';
 import { Container, Stack, SxProps, Typography } from "@mui/material";
-import { resumeService } from '../services/ResumeService';
-import { contentSx, ResumeIcon } from "./common";
+import { resumeService } from '../../services/ResumeService';
+import { contentSx, ResumeIcon } from "../common";
 
 const sx: SxProps = {
   ...contentSx,

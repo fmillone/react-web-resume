@@ -1,8 +1,8 @@
 import { faScrewdriverWrench, faToolbox } from "@fortawesome/free-solid-svg-icons";
 import { Chip, Container, Stack, SxProps, Typography } from "@mui/material";
 import React from "react";
-import { resumeService } from "../services/ResumeService";
-import { contentSx, ResumeIcon } from "./common";
+import { resumeService } from "../../services/ResumeService";
+import { contentSx, ResumeIcon } from "../common";
 
 const sx: SxProps = {
   ...contentSx,

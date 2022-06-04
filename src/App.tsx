@@ -3,8 +3,8 @@ import { Container, Grid, ThemeProvider } from '@mui/material';
 
 import { theme } from './theme';
 import { Footer } from './components/Footer';
-import { SideBar } from './components/SideBar';
-import { Content } from './components/Content';
+import { SideBar } from './components/sidebar/SideBar';
+import { MainColumn } from './components/mainColumn/MainColumn';
 import { resumeService } from './services/ResumeService';
 
 const name = resumeService.getData().name;
@@ -21,7 +21,7 @@ export default function App() {
               <SideBar />
             </Grid>
             <Grid item xs={12} sm={8}>
-              <Content/>
+              <MainColumn/>
             </Grid>
           </Grid>
         </Container>

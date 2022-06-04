@@ -1,7 +1,7 @@
 import { styled, Typography } from "@mui/material";
 import React, { CSSProperties } from "react";
-import profilePhoto from '../images/profile_photo.jpg';
-import { resumeService } from "../services/ResumeService";
+import profilePhoto from '../../images/profile_photo.jpg';
+import { resumeService } from "../../services/ResumeService";
 
 
 const containerStyle: CSSProperties = {

@@ -2,8 +2,8 @@ import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faBriefcase, faEnvelope, faGlobeAmericas, faHome, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Link, Stack, Typography } from "@mui/material";
-import { resumeService } from "../services/ResumeService";
-import { contentSx, ResumeIcon } from "./common";
+import { resumeService } from "../../services/ResumeService";
+import { contentSx, ResumeIcon } from "../common";
 
 
 const contact = resumeService.getData().contact;
