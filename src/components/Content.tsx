@@ -22,7 +22,7 @@ export function Content() {
   return (
     <Stack spacing={2}>
       <ContentCard icon={faUser} title="About Me">
-        <ContentText>{aboutMe}</ContentText>
+        {joinContent(aboutMe)!}
       </ContentCard>
 
       <ContentCard icon={faSuitcase} title="Work Experience">
@@ -91,7 +91,7 @@ function CardHeading({ icon, children }: CardHeadingProps) {
 }
 
 
-function joinDescriptions(description?:string| string[]) {
+function joinContent(description?:string| string[]) {
   if(description) {
     if(Array.isArray(description)) {
       return  description.map((it, i) => <ContentText key={i}>{it}</ContentText>);
@@ -105,7 +105,7 @@ function toContentDescription({ description, ...rest }: any, index: number, list
   return (
     <div key={index}>
       <ContentDescription {...rest} >
-        {joinDescriptions(description)}
+        {joinContent(description)}
       </ContentDescription>
       {list.length - 1 === index ? '' : <ContentDivider />}
     </div>

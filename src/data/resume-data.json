@@ -1,6 +1,9 @@
 {
   "name": "John Doe",
-  "aboutMe": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
+  "aboutMe": [
+    "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic.",
+    "Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+  ],
   "contact": {
     "title": "Sr. Software Developer",
     "city": "Tandil, Argentina",

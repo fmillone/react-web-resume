@@ -4,7 +4,7 @@ import data from '../data/resume-data.json';
 interface Resume {
   skills: string[];
   name: string;
-  aboutMe: string;
+  aboutMe: string | string[];
   education: Experience[];
   experience: Experience[];
   languages: string[];
