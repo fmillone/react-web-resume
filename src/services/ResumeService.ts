@@ -28,6 +28,7 @@ interface Contact {
   github: string;
   linkedin: string;
   website: string;
+  websiteName?: string;
   twitter: string;
 }
 
