@@ -1,7 +1,6 @@
 name: Build & Publish
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "master" ]
 
@@ -23,4 +22,4 @@ jobs:
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
-          PUBLIC_URL: /react-web-resume
+          PUBLIC_URL: "/react-web-resume"
