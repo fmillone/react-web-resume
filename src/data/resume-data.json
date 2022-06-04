@@ -11,10 +11,12 @@
     "phone": "+54 9 123",
     "github": "github",
     "linkedin": "linkedin",
-    "websites": [{
-      "name": "React Web Resume",
-      "url": "https://fmillone.github.io/react-web-resume"
-    }],
+    "websites": [
+      {
+        "name": "React Web Resume",
+        "url": "https://fmillone.github.io/react-web-resume"
+      }
+    ],
     "twitter": "twitter"
   },
   "languages": [
@@ -42,7 +44,7 @@
   ],
   "sideProjects": [
     {
-      "title":"Personal Website",
+      "title": "Personal Website",
       "company": "Done",
       "description": "My personal website",
       "showCompressed": true
@@ -57,7 +59,7 @@
         "Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
       ],
       "company": "Conosoft.com.ar",
-      "place":"Tandil",
+      "place": "Tandil",
       "showCompressed": true
     },
     {
@@ -66,7 +68,7 @@
       "endDate": "Dec 2014",
       "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
       "company": "something.com",
-      "place":"Remote",
+      "place": "Remote",
       "showCompressed": true
     },
     {
@@ -75,7 +77,7 @@
       "endDate": "Mar 2012",
       "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
       "company": "somewhere.com",
-      "place":"Remote",
+      "place": "Remote",
       "showCompressed": false
     }
   ],
@@ -84,7 +86,7 @@
       "title": " ",
       "startDate": "2022",
       "description": "All I need to know in one place",
-      "company":"Street University",
+      "company": "Street University",
       "place": "street",
       "showCompressed": true
     },
@@ -101,7 +103,7 @@
       "startDate": "2010",
       "endDate": "2013",
       "company": "School of Sarasa",
-      "place":"Remote",
+      "place": "Remote",
       "showCompressed": true
     }
   ],

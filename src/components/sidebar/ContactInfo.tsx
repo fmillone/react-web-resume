@@ -20,18 +20,18 @@ export function ContactInfo() {
         <Link href={`tel:${contact.phone}`}>{contact.phone}</Link>
       </ContactItem>
       <ContactItem icon={faGithub}>
-        <Link href={`https://github.com/${contact.github}`}>{contact.github}</Link>
+        <Link target="_blank"  href={`https://github.com/${contact.github}`}>{contact.github}</Link>
       </ContactItem>
       <ContactItem icon={faLinkedin}>
-        <Link href={`https://www.linkedin.com/in/${contact.linkedin}`}>{contact.linkedin}</Link>
+        <Link target="_blank" href={`https://www.linkedin.com/in/${contact.linkedin}`}>{contact.linkedin}</Link>
       </ContactItem>
       {contact.websites.map(web => (
         <ContactItem icon={faGlobeAmericas}>
-          Web: <Link href={web.url}>{web.name || web.url}</Link>
+          Web: <Link target="_blank"  href={web.url}>{web.name || web.url}</Link>
         </ContactItem>
       ))}
       <ContactItem icon={faTwitter}>
-        <Link href={`https://twitter.com/${contact.twitter}`}>{contact.twitter}</Link>
+        <Link target="_blank"  href={`https://twitter.com/${contact.twitter}`}>{contact.twitter}</Link>
       </ContactItem>
     </Stack>
   );

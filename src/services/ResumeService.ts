@@ -31,7 +31,7 @@ interface Contact {
   github: string;
   linkedin: string;
   websites: {
-    name: string;
+    name?: string;
     url: string;
   }[]
   twitter: string;
