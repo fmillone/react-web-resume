@@ -18,6 +18,8 @@ const ContentDivider = styled(Divider)({
 const aboutMe = resumeService.getData().aboutMe;
 const experience = resumeService.getData().experience;
 const education = resumeService.getData().education;
+const certifications = resumeService.getData().certifications;
+const sideProjects = resumeService.getData().sideProjects;
 export function Content() {
   return (
     <Stack spacing={2}>
@@ -27,6 +29,14 @@ export function Content() {
 
       <ContentCard icon={faSuitcase} title="Work Experience">
         {experience.map(toContentDescription)}
+      </ContentCard>
+
+      <ContentCard icon={faSuitcase} title="Noteworthy side projects">
+        {sideProjects.map(toContentDescription)}
+      </ContentCard>
+
+      <ContentCard icon={faUserGraduate} title="Certifications">
+        {certifications.map(toContentDescription)}
       </ContentCard>
 
       <ContentCard icon={faUserGraduate} title="Education">
@@ -49,12 +59,15 @@ const currentJobLabel = (<Chip label="Current" size="small" color="primary" />);
 const iconSx: SxProps = { fontSize: '0.8rem', marginRight: 0.2, marginBottom: 0.1 };
 function ContentDescription({ title, children, startDate, endDate, company, place }: ContentDescriptionProps) {
   const end = endDate || currentJobLabel;
+  const startEnd = (startDate || endDate) && (
+    <Typography variant="subtitle2" sx={{ color: 'primary.main', float: 'right' }} >
+      <ResumeIcon icon={faCalendarDays} sx={iconSx} />
+      {startDate} - {end}
+    </Typography>
+  );
   return (
     <Container sx={contentSx}>
-      <Typography variant="subtitle2" sx={{ color: 'primary.main', float: 'right' }} >
-        <ResumeIcon icon={faCalendarDays} sx={iconSx} />
-        {startDate} - {end}
-      </Typography>
+      {startEnd}
       <Typography variant="h5" >{title}</Typography>
       <Typography variant="h6" >{company}, {place}</Typography>
       {children}

@@ -20,6 +20,22 @@
     "🇺🇸 English: Conversational",
     "🇮🇹 Italian: Basic"
   ],
+  "certifications": [
+    {
+      "company": "Web academy",
+      "startDate": "2016",
+      "title": "Introduction to Web Security",
+      "endDate": "(10 hours)",
+      "place": "by Prof. John Something"
+    }
+  ],
+  "sideProjects": [
+    {
+      "title":"Personal Website",
+      "company": "Done",
+      "description": "My personal website"
+    }
+  ],
   "experience": [
     {
       "title": "Sr Developer",

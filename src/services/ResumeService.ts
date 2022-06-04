@@ -7,13 +7,15 @@ interface Resume {
   aboutMe: string | string[];
   education: Experience[];
   experience: Experience[];
+  certifications: Experience[];
+  sideProjects: Experience[];
   languages: string[];
   contact: Contact;
 }
 
 interface Experience {
   title: string;
-  startDate: string;
+  startDate?: string;
   endDate?: string;
   description?: string | string[];
   company?: string;
