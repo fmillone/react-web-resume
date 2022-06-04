@@ -30,8 +30,10 @@ interface Contact {
   phone: string;
   github: string;
   linkedin: string;
-  website: string;
-  websiteName?: string;
+  websites: {
+    name: string;
+    url: string;
+  }[]
   twitter: string;
 }
 

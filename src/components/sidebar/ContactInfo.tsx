@@ -25,9 +25,11 @@ export function ContactInfo() {
       <ContactItem icon={faLinkedin}>
         <Link href={`https://www.linkedin.com/in/${contact.linkedin}`}>{contact.linkedin}</Link>
       </ContactItem>
-      <ContactItem icon={faGlobeAmericas}>
-        Web: <Link href={contact.website}>{contact.websiteName || contact.website}</Link>
-      </ContactItem>
+      {contact.websites.map(web => (
+        <ContactItem icon={faGlobeAmericas}>
+          Web: <Link href={web.url}>{web.name || web.url}</Link>
+        </ContactItem>
+      ))}
       <ContactItem icon={faTwitter}>
         <Link href={`https://twitter.com/${contact.twitter}`}>{contact.twitter}</Link>
       </ContactItem>

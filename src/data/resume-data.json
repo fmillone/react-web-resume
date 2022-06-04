@@ -11,8 +11,10 @@
     "phone": "+54 9 123",
     "github": "github",
     "linkedin": "linkedin",
-    "website": "https://fmillone.github.io/react-web-resume",
-    "websiteName": "React Web Resume",
+    "websites": [{
+      "name": "React Web Resume",
+      "url": "https://fmillone.github.io/react-web-resume"
+    }],
     "twitter": "twitter"
   },
   "languages": [
