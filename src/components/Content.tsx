@@ -1,10 +1,11 @@
-import { faSuitcase, faUser, faUserGraduate, IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { faSuitcase, faUser, faUserGraduate, IconDefinition, faAngleDown, faAngleLeft, faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarDays } from "@fortawesome/free-regular-svg-icons";
-import { Chip, Divider, Paper, Stack, styled, Typography } from "@mui/material";
+import { Chip, Collapse, Divider, IconButton, Paper, Stack, styled, Typography } from "@mui/material";
 import { Container, SxProps } from "@mui/system";
 import { contentSx, ResumeIcon } from "./common";
-import { resumeService } from "../services/ResumeService";
-import React from "react";
+import { Experience, resumeService } from "../services/ResumeService";
+import React, { useMemo, useState } from "react";
+import { TransitionGroup } from "react-transition-group";
 
 const ContentText = styled(Typography)({
   marginTop: 5,
@@ -27,23 +28,55 @@ export function Content() {
         {joinContent(aboutMe)!}
       </ContentCard>
 
-      <ContentCard icon={faSuitcase} title="Work Experience">
-        {experience.map(toContentDescription)}
-      </ContentCard>
+      <ExpandableCard experience={experience} icon={faSuitcase} title="Work Experience" />
 
-      <ContentCard icon={faSuitcase} title="Noteworthy side projects">
-        {sideProjects.map(toContentDescription)}
-      </ContentCard>
+      <ExpandableCard experience={sideProjects} icon={faSuitcase} title="Noteworthy side projects" />
 
-      <ContentCard icon={faUserGraduate} title="Certifications">
-        {certifications.map(toContentDescription)}
-      </ContentCard>
+      <ExpandableCard experience={certifications} icon={faCertificate} title="Certifications" />
 
-      <ContentCard icon={faUserGraduate} title="Education">
-        {education.map(toContentDescription)}
-      </ContentCard>
+      <ExpandableCard experience={education} icon={faUserGraduate} title="Education" />
 
     </Stack>
+  );
+}
+
+interface ExpandableCardProps {
+  experience: Experience[];
+  title: string;
+  icon: IconDefinition;
+}
+function ExpandableCard({ experience, icon, title }: ExpandableCardProps) {
+  const [expanded, setExpanded] = useState<boolean>(false);
+
+  const expandable = useMemo(() => !experience.every(e => e.showCompressed), [experience]);
+  const expandIcon = useMemo(() => expandable && (
+    <IconButton sx={{ marginTop: '1rem', float: 'right' }} onClick={() => setExpanded(e => !e)}>
+      <ResumeIcon sx={{ marginRight: 0 }} icon={expanded ? faAngleLeft : faAngleDown} />
+    </IconButton>
+  ), [expanded, expandable]);
+
+  const data = useMemo(
+    () => expanded ? experience : experience.filter(e => e.showCompressed),
+    [expanded, experience]
+  );
+
+  return (
+    <Paper sx={contentSx} elevation={8}>
+      {expandIcon}
+      <CardHeading icon={icon}>{title}</CardHeading>
+      <TransitionGroup>
+        {data.map(collapsed(toContentDescription))}
+      </TransitionGroup>
+    </Paper>
+  );
+
+}
+type MapCallback<T, U> = (e: T, i: number, a: T[]) => U;
+function collapsed<T>(children: MapCallback<T, any>): MapCallback<T, any> {
+  return (e, i, a) => (
+    <Collapse key={i}>
+      {children(e, i, a)}
+    </Collapse>
   );
 }
 
@@ -104,10 +137,10 @@ function CardHeading({ icon, children }: CardHeadingProps) {
 }
 
 
-function joinContent(description?:string| string[]) {
-  if(description) {
-    if(Array.isArray(description)) {
-      return  description.map((it, i) => <ContentText key={i}>{it}</ContentText>);
+function joinContent(description?: string | string[]) {
+  if (description) {
+    if (Array.isArray(description)) {
+      return description.map((it, i) => <ContentText key={i}>{it}</ContentText>);
     } else {
       return <ContentText>{description}</ContentText>;
     }

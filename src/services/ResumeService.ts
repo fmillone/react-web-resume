@@ -13,13 +13,14 @@ interface Resume {
   contact: Contact;
 }
 
-interface Experience {
+export interface Experience {
   title: string;
   startDate?: string;
   endDate?: string;
   description?: string | string[];
   company?: string;
   place?: string;
+  showCompressed?: boolean;
 }
 
 interface Contact {

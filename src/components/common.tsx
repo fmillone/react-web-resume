@@ -6,11 +6,11 @@ const _ResumeIcon = (props: FontAwesomeIconProps) => <FontAwesomeIcon fixedWidth
 export const ResumeIcon = styled(_ResumeIcon)(({theme}) => ({
     color: theme.palette.primary.main,
     marginRight: '10px',
-    fontSize: '18px',
+    fontSize: '1.1rem',
 }));
 
 export const contentSx: SxProps = {
-  padding: '0.01rem 16px'
+  padding: '0.01rem 1rem'
 };
 
 

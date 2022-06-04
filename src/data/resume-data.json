@@ -24,16 +24,26 @@
     {
       "company": "Web academy",
       "startDate": "2016",
+      "title": "Advanced Web Security",
+      "endDate": "(10 hours)",
+      "place": "by Prof. John Something",
+      "showCompressed": true
+    },
+    {
+      "company": "Web academy",
+      "startDate": "2015",
       "title": "Introduction to Web Security",
       "endDate": "(10 hours)",
-      "place": "by Prof. John Something"
+      "place": "by Prof. John Something",
+      "showCompressed": false
     }
   ],
   "sideProjects": [
     {
       "title":"Personal Website",
       "company": "Done",
-      "description": "My personal website"
+      "description": "My personal website",
+      "showCompressed": true
     }
   ],
   "experience": [
@@ -45,7 +55,8 @@
         "Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
       ],
       "company": "Conosoft.com.ar",
-      "place":"Tandil"
+      "place":"Tandil",
+      "showCompressed": true
     },
     {
       "title": "Web Developer",
@@ -53,7 +64,8 @@
       "endDate": "Dec 2014",
       "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
       "company": "something.com",
-      "place":"Remote"
+      "place":"Remote",
+      "showCompressed": true
     },
     {
       "title": "Graphic Designer",
@@ -61,7 +73,8 @@
       "endDate": "Mar 2012",
       "description": "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderitsunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.",
       "company": "somewhere.com",
-      "place":"Remote"
+      "place":"Remote",
+      "showCompressed": false
     }
   ],
   "education": [
@@ -70,21 +83,24 @@
       "startDate": "2022",
       "description": "All I need to know in one place",
       "company":"Street University",
-      "place": "street"
+      "place": "street",
+      "showCompressed": true
     },
     {
       "title": "Master Degree",
       "startDate": "2013",
       "endDate": "2015",
       "company": "Internet Business School",
-      "place": "howtocreateyourbusinessandnotfail.com"
+      "place": "howtocreateyourbusinessandnotfail.com",
+      "showCompressed": false
     },
     {
       "title": "Bachelor Degree",
       "startDate": "2010",
       "endDate": "2013",
       "company": "School of Sarasa",
-      "place":"Remote"
+      "place":"Remote",
+      "showCompressed": true
     }
   ],
   "skills": [
