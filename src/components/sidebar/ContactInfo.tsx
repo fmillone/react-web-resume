@@ -26,7 +26,7 @@ export function ContactInfo() {
         <Link target="_blank" href={`https://www.linkedin.com/in/${contact.linkedin}`}>{contact.linkedin}</Link>
       </ContactItem>
       {contact.websites.map(web => (
-        <ContactItem icon={faGlobeAmericas}>
+        <ContactItem key={web.url} icon={faGlobeAmericas}>
           Web: <Link target="_blank"  href={web.url}>{web.name || web.url}</Link>
         </ContactItem>
       ))}

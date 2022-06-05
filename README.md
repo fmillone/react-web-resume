@@ -2,10 +2,7 @@
 
 
 ## TODO:
-* collapse work experience
-* links in profile
 * find favicon
-* change hardcoded name title in html
 * change hardcoded name in manifest.json
 
 
