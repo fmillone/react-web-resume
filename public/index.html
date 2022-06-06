@@ -33,7 +33,11 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
 
-  <title>Web Resume</title>
+  <% if(process.env.REACT_APP_TITLE) { %>
+    <title><%= process.env.REACT_APP_TITLE%></title>
+  <% } else { %>
+    <title>Web Resume</title>
+  <% } %>
 </head>
 
 <body>

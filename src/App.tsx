@@ -10,7 +10,9 @@ import { resumeService } from './services/ResumeService';
 const name = resumeService.getData().name;
 export default function App() {
   useEffect(()=> {
-    document.title = `${name}'s Resume`;
+    if(!process.env.REACT_APP_TITLE) {
+      document.title = `${name}'s Resume`;
+    }
   }, []);
   return (
     <ThemeProvider theme={theme} >

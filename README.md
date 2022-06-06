@@ -2,7 +2,6 @@
 
 
 ## TODO:
-* find favicon
 * change hardcoded name in manifest.json
 
 
