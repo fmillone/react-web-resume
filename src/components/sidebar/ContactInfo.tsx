@@ -14,7 +14,7 @@ export function ContactInfo() {
       <ContactItem icon={faBriefcase}>{contact.title}</ContactItem>
       <ContactItem icon={faHome}>{contact.city}</ContactItem>
       <ContactItem icon={faEnvelope}>
-        <Link href={`mailto:${contact.email}`}>{contact.email}</Link>
+        <Link href={`mailto:${contact.email}`}>{contact.emailDisplayName || contact.email}</Link>
       </ContactItem>
       <ContactItem icon={faPhone}>
         <Link href={`tel:${contact.phone}`}>{contact.phone}</Link>

@@ -27,6 +27,7 @@ interface Contact {
   title: string;
   city: string;
   email: string;
+  emailDisplayName?: string;
   phone: string;
   github: string;
   linkedin: string;
