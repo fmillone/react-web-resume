@@ -20,7 +20,6 @@ export const Footer = () => {
       </Typography>
       <br />
       <Copyright />
-
     </Box>
   );
 }

@@ -1,8 +1,14 @@
 import { colors, createTheme, responsiveFontSizes } from "@mui/material";
 
+
+function primaryColor(): any {
+  const color = process.env.REACT_APP_COLOR as keyof typeof colors;
+  return colors[color] || colors.deepPurple;
+}
+
 export const theme = responsiveFontSizes(createTheme({
     palette: {
-        primary: colors.deepPurple,
+        primary: primaryColor(),
         text: {
           secondary: '#757575'
         }
