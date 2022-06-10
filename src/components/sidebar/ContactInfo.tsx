@@ -16,9 +16,9 @@ export function ContactInfo() {
       <ContactItem icon={faEnvelope}>
         <Link href={`mailto:${contact.email}`}>{contact.emailDisplayName || contact.email}</Link>
       </ContactItem>
-      <ContactItem icon={faPhone}>
+      {contact.phone && <ContactItem icon={faPhone}>
         <Link href={`tel:${contact.phone}`}>{contact.phone}</Link>
-      </ContactItem>
+      </ContactItem>}
       <ContactItem icon={faGithub}>
         <Link target="_blank"  href={`https://github.com/${contact.github}`}>{contact.github}</Link>
       </ContactItem>

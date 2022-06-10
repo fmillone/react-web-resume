@@ -1,5 +1,6 @@
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { Chip, Container, Divider, styled, SxProps, Typography } from "@mui/material";
+import { useMemo } from "react";
 import { ResumeIcon, contentSx } from "../common";
 
 
@@ -35,9 +36,20 @@ function ContentDescription({ title, children, startDate, endDate, company, plac
     <Container sx={contentSx}>
       {startEnd}
       <Typography variant="h5" >{title}</Typography>
-      <Typography variant="h6" >{company}, {place}</Typography>
+      <DescriptionSubtitle company={company} place={place}/>
       {children}
     </Container>
+  );
+}
+
+interface DescriptionSubtitleProps {
+  company?: string;
+  place?: string;
+}
+function DescriptionSubtitle({company, place}: DescriptionSubtitleProps) {
+  const subtitle = useMemo(() => [company, place].filter(e => !!e).join(', '), [company, place]);
+  return (
+    <Typography variant="h6" >{subtitle}</Typography>
   );
 }
 
