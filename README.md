@@ -1,5 +1,7 @@
 # Web CV
 
+** WARN ** This repo is deprecated in favor of [react-blog-and-resume](https://github.com/fmillone/react-blog-and-resume)
+
 
 ## TODO:
 * change hardcoded name in manifest.json
